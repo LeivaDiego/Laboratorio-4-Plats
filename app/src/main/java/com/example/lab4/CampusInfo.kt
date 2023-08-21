@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lab4.ui.theme.Lab4Theme
 
-class MainActivity : ComponentActivity() {
+class CampusInfo : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -43,6 +43,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    CampusInfoPage()
                 }
             }
         }
@@ -53,12 +54,12 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CampusInfoPreview() {
     Lab4Theme {
-        CampusInfo()
+        CampusInfoPage()
     }
 }
 
 @Composable
-fun CampusInfo() {
+fun CampusInfoPage() {
     Surface {
         Column {
             CentralCampus()
@@ -91,7 +92,9 @@ fun Featured(){
          style = TextStyle(color = Color.Gray, fontSize = 24.sp, fontWeight = FontWeight.Bold),
          modifier = Modifier.padding(20.dp))
 
-    Row (modifier = Modifier.fillMaxWidth().size(180.dp),
+    Row (modifier = Modifier
+        .fillMaxWidth()
+        .size(180.dp),
          horizontalArrangement = Arrangement.SpaceBetween)
     {
         ServiceNow(modifier = Modifier.weight(1f))
@@ -135,7 +138,10 @@ fun News(modifier: Modifier = Modifier){
         Image(painter = news,
             contentDescription = "News Image",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.width(180.dp).height(100.dp).clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
+            modifier = Modifier
+                .width(180.dp)
+                .height(100.dp)
+                .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
         )
 
         Box(modifier = Modifier
@@ -159,7 +165,9 @@ fun ServicesAndResources(){
         style = TextStyle(color = Color.Gray, fontSize = 24.sp, fontWeight = FontWeight.Bold),
         modifier = Modifier.padding(20.dp))
 
-    Row (modifier = Modifier.fillMaxWidth().size(180.dp),
+    Row (modifier = Modifier
+        .fillMaxWidth()
+        .size(180.dp),
          horizontalArrangement = Arrangement.SpaceBetween)
     {
         ServiceDirectory(modifier = Modifier.weight(1f))
@@ -175,7 +183,10 @@ fun ServiceDirectory(modifier: Modifier = Modifier){
         Image(painter = services,
             contentDescription = "Student Services Image",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.width(180.dp).height(100.dp).clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
+            modifier = Modifier
+                .width(180.dp)
+                .height(100.dp)
+                .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
         )
 
         Box(modifier = Modifier
