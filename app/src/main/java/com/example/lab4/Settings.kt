@@ -47,6 +47,7 @@ class Settings: ComponentActivity() {
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
 fun SettingsPreview() {
@@ -54,6 +55,8 @@ fun SettingsPreview() {
         SettingsPage()
     }
 }
+
+
 @Composable
 fun SettingsPage(){
     Surface {
@@ -65,163 +68,141 @@ fun SettingsPage(){
         val priv = painterResource(id = R.drawable.privacy)
         val back = painterResource(id = R.drawable.back)
 
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
-            )
+        Column(horizontalAlignment = Alignment.CenterHorizontally,
+               modifier = Modifier.fillMaxWidth())
+        {
+            Row(horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth())
             {
-                Image(
-                    painter = back,
-                    contentDescription = "Back Arrow",
-                    Modifier.absoluteOffset(0.dp, 16.dp).size(40.dp)
-                )
+                Image(painter = back,
+                      contentDescription = "Back Arrow",
+                      modifier = Modifier
+                          .absoluteOffset(0.dp, 16.dp)
+                          .size(40.dp))
 
-                Text(
-                    text = "Configuración",
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 26.sp,
-                        fontWeight = FontWeight.Bold
-                    ),
-                    modifier = Modifier.padding(20.dp)
-                )
+                Text(text = "Configuración",
+                     style = TextStyle(color = Color.Black, fontSize = 26.sp, fontWeight = FontWeight.Bold),
+                     modifier = Modifier.padding(20.dp))
 
                 Text(text = "       ")
             }
-            Column(horizontalAlignment = Alignment.Start) {
 
+            Column(horizontalAlignment = Alignment.Start)
+            {
                 Divider(color = Color.Gray, thickness = 1.dp)
 
                 Row {
-                    Image(
-                        painter = prof,
-                        contentDescription = "profile settings logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
-                    Text(
-                        text = "Editar Perfil",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                        modifier = Modifier.padding(20.dp)
-                    )
-                }
-                Divider(color = Color.Gray, thickness = 1.dp)
+                    Image(painter = prof,
+                         contentDescription = "profile settings logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
 
-                Row {
-                    Image(
-                        painter = mail,
-                        contentDescription = "email settings logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
-                    Text(
-                        text = "Correos Electrónicos",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                        modifier = Modifier.padding(20.dp)
-                    )
+                    Text(text = "Editar Perfil",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                         modifier = Modifier.padding(20.dp))
                 }
 
                 Divider(color = Color.Gray, thickness = 1.dp)
 
                 Row {
-                    Image(
-                        painter = notif,
-                        contentDescription = "notifications settings logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
-                    Text(
-                        text = "Notificaciones",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                        modifier = Modifier.padding(20.dp)
-                    )
+                    Image(painter = mail,
+                         contentDescription = "email settings logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
+
+                    Text(text = "Correos Electrónicos",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                         modifier = Modifier.padding(20.dp))
                 }
 
                 Divider(color = Color.Gray, thickness = 1.dp)
 
                 Row {
-                    Image(
-                        painter = priv,
-                        contentDescription = "privacy settings logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
-                    Text(
-                        text = "Privacidad",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                        modifier = Modifier.padding(20.dp)
-                    )
+                    Image(painter = notif,
+                         contentDescription = "notifications settings logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
+
+                    Text(text = "Notificaciones",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                         modifier = Modifier.padding(20.dp))
+                }
+
+                Divider(color = Color.Gray, thickness = 1.dp)
+
+                Row {
+                    Image(painter = priv,
+                         contentDescription = "privacy settings logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
+
+                    Text(text = "Privacidad",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                         modifier = Modifier.padding(20.dp))
                 }
 
                 Divider(color = Color.LightGray, thickness = 20.dp)
 
-
                 Row {
-                    Image(
-                        painter = help,
-                        contentDescription = "help logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
+                    Image(painter = help,
+                         contentDescription = "help logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
+
                     Column {
-                        Text(
-                            text = "Ayuda y Comentarios",
-                            style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 10.dp)
-                        )
-                        Text(
-                            text = "Solución de problemas y Guías",
-                            style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 10.dp)
-                        )
+                        Text(text = "Ayuda y Comentarios",
+                             style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                             modifier = Modifier
+                                 .padding(horizontal = 20.dp)
+                                 .padding(top = 10.dp))
+
+                        Text(text = "Solución de problemas y Guías",
+                             style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                             modifier = Modifier
+                                 .padding(horizontal = 20.dp)
+                                 .padding(bottom = 10.dp))
                     }
                 }
 
                 Divider(color = Color.Gray, thickness = 1.dp)
 
                 Row {
-                    Image(
-                        painter = about,
-                        contentDescription = "About logo",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .absoluteOffset(0.dp, 15.dp)
-                    )
-                    Column {
-                        Text(
-                            text = "Información",
-                            style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 10.dp)
-                        )
-                        Text(
-                            text = "Información y Documentación de la App",
-                            style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 10.dp)
-                        )
-                    }
+                    Image(painter = about,
+                         contentDescription = "About logo",
+                         modifier = Modifier
+                             .size(40.dp)
+                             .absoluteOffset(0.dp, 15.dp))
 
+                    Column {
+                        Text(text = "Información",
+                             style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                             modifier = Modifier
+                                 .padding(horizontal = 20.dp)
+                                 .padding(top = 10.dp))
+
+                        Text(text = "Información y Documentación de la App",
+                             style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                             modifier = Modifier
+                                 .padding(horizontal = 20.dp)
+                                 .padding(bottom = 10.dp))
+                    }
                 }
 
                 Divider(color = Color.LightGray, thickness = 20.dp)
 
-                Text(
-                    text = "Cerrar Sesión",
-                    style = TextStyle(color = Color.Red, fontSize = 20.sp, FontWeight.Bold),
-                    modifier = Modifier.padding(20.dp),
-                    textAlign = TextAlign.Center)
+                Text(text = "Cerrar Sesión",
+                     style = TextStyle(color = Color.Red, fontSize = 20.sp, FontWeight.Bold),
+                     modifier = Modifier.padding(20.dp),
+                     textAlign = TextAlign.Center)
+
                 Divider(color = Color.Gray, thickness = 1.dp)
+
                 Divider(color = Color.LightGray, thickness = 500.dp)
-
             }
         }
     }

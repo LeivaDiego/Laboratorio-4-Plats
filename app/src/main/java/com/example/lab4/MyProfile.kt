@@ -80,43 +80,43 @@ fun Profile(){
 
     Column(horizontalAlignment = Alignment.CenterHorizontally)
     {
-        Row (horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth())
+        Row (horizontalArrangement = Arrangement.SpaceBetween,
+             modifier = Modifier.fillMaxWidth())
         {
             Text(text = "   ")
 
             Text(text = "Mi Perfil",
-                style = TextStyle(color = Color.Black, fontSize = 26.sp, fontWeight = FontWeight.Bold),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 26.sp, fontWeight = FontWeight.Bold),
+                 modifier = Modifier.padding(20.dp))
 
-            Image(painter = configur, contentDescription = "Settings logo", Modifier.absoluteOffset(0.dp,25.dp))
+            Image(painter = configur,
+                  contentDescription = "Settings logo", Modifier.absoluteOffset(0.dp,25.dp))
         }
 
-        Box (
-            Modifier
-                .fillMaxWidth()
-                .height(200.dp))
+        Box (Modifier
+            .fillMaxWidth()
+            .height(200.dp))
         {
             Image(painter = bgprofile,
-                contentDescription = "Background",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .height(150.dp)
-                    .alpha(0.6f))
+                  contentDescription = "Background",
+                  contentScale = ContentScale.Crop,
+                  modifier = Modifier
+                      .height(150.dp)
+                      .alpha(0.6f))
 
-            Image(painter = circulo, contentDescription = "Circle",
-                modifier = Modifier
-                    .size(150.dp)
-                    .align(Alignment.Center)
-                    .absoluteOffset(0.dp, 40.dp)
-            )
+            Image(painter = circulo,
+                  contentDescription = "Circle",
+                  modifier = Modifier
+                      .size(150.dp)
+                      .align(Alignment.Center)
+                      .absoluteOffset(0.dp, 40.dp))
 
             Image(painter = avatar,
-            contentDescription = "Profile Avatar",
-            modifier = Modifier
-                .size(150.dp)
-                .align(Alignment.Center)
-                .absoluteOffset(0.dp, 40.dp)
-            )
+                  contentDescription = "Profile Avatar",
+                  modifier = Modifier
+                      .size(150.dp)
+                      .align(Alignment.Center)
+                      .absoluteOffset(0.dp, 40.dp))
         }
 
         Text(text = "DIEGO ALBERTO LEIVA PÉREZ",
@@ -135,75 +135,97 @@ fun Menu(){
     val courses = painterResource(id = R.drawable.courses)
     val campus = painterResource(id = R.drawable.campus)
 
-    Column (Modifier.fillMaxWidth()){
-
+    Column (Modifier.fillMaxWidth())
+    {
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = campus, contentDescription = "MyCampus logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = campus,
+                  contentDescription = "MyCampus logo",
+                  modifier = Modifier
+                      .size(40.dp)
+                      .absoluteOffset(0.dp, 15.dp))
+
             Column {
                 Text(text = "Mi Campus",
-                    style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                    modifier = Modifier.padding(horizontal = 20.dp).padding(top = 10.dp))
+                     style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                     modifier = Modifier
+                         .padding(horizontal = 20.dp)
+                         .padding(top = 10.dp))
 
                 Text(text = "Campus Central",
-                    style = TextStyle(color = Color.Black, fontSize = 15.sp), modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 10.dp))
+                     style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                    modifier = Modifier
+                        .padding(horizontal = 20.dp)
+                        .padding(bottom = 10.dp))
             }
-
         }
 
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = friends, contentDescription = "MyFriends logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp) )
+            Image(painter = friends,
+                  contentDescription = "MyFriends logo",
+                  modifier = Modifier
+                      .size(40.dp)
+                      .absoluteOffset(0.dp, 15.dp) )
+
             Text(text = "Mis Amigos",
-                style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                 modifier = Modifier.padding(20.dp))
         }
 
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = calendar, contentDescription = "MyCalendar logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = calendar,
+                contentDescription = "MyCalendar logo",
+                modifier = Modifier
+                    .size(40.dp)
+                    .absoluteOffset(0.dp, 15.dp))
+
             Text(text = "Mi Calendario",
-                style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                 modifier = Modifier.padding(20.dp))
         }
 
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = courses, contentDescription = "MyCourses logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = courses,
+                contentDescription = "MyCourses logo",
+                modifier = Modifier
+                    .size(40.dp)
+                    .absoluteOffset(0.dp, 15.dp))
+
             Text(text = "Mis Cursos",
-                style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                 modifier = Modifier.padding(20.dp))
         }
 
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = grades, contentDescription = "MyGrades logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = grades,
+                contentDescription = "MyGrades logo",
+                modifier = Modifier
+                    .size(40.dp)
+                    .absoluteOffset(0.dp, 15.dp))
+
             Text(text = "Mis Calificaciones",
-                style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                 modifier = Modifier.padding(20.dp))
         }
 
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = mygroups, contentDescription = "MyGroups logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = mygroups,
+                contentDescription = "MyGroups logo",
+                modifier = Modifier
+                    .size(40.dp)
+                    .absoluteOffset(0.dp, 15.dp))
+
             Text(text = "Mis Grupos",
                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
                 modifier = Modifier.padding(20.dp))
@@ -212,12 +234,15 @@ fun Menu(){
         Divider(color = Color.Gray, thickness = 1.dp)
 
         Row {
-            Image(painter = schedule, contentDescription = "MyEvents logo", modifier = Modifier
-                .size(40.dp)
-                .absoluteOffset(0.dp, 15.dp))
+            Image(painter = schedule,
+                contentDescription = "MyEvents logo",
+                modifier = Modifier
+                    .size(40.dp)
+                    .absoluteOffset(0.dp, 15.dp))
+
             Text(text = "Mis Eventos Proximos",
-                style = TextStyle(color = Color.Black, fontSize = 20.sp),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 20.sp),
+                 modifier = Modifier.padding(20.dp))
         }
     }
 }

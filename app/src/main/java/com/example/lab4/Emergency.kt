@@ -51,6 +51,7 @@ class Emergency : ComponentActivity(){
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
 fun EmergencyPreview() {
@@ -60,39 +61,29 @@ fun EmergencyPreview() {
 }
 
 @Composable
-fun EmergencyContacts() {
+fun EmergencyContacts()
+{
     Surface {
         val alert = painterResource(id = R.drawable.emergency)
         val phoner = painterResource(id = R.drawable.call)
         val clinic = painterResource(id = R.drawable.clinic)
         val back = painterResource(id = R.drawable.back)
 
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
-            )
+        Column(horizontalAlignment = Alignment.CenterHorizontally,
+               modifier = Modifier.fillMaxWidth())
+        {
+            Row(horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth())
             {
-                Image(
-                    painter = back,
-                    contentDescription = "Back Arrow",
-                    Modifier
-                        .absoluteOffset(0.dp, 16.dp)
-                        .size(40.dp)
-                )
+                Image(painter = back,
+                      contentDescription = "Back Arrow",
+                      modifier = Modifier
+                          .absoluteOffset(0.dp, 16.dp)
+                          .size(40.dp))
 
-                Text(
-                    text = "Contactos de Emergencia",
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 26.sp,
-                        fontWeight = FontWeight.Bold
-                    ),
-                    modifier = Modifier.padding(20.dp)
-                )
+                Text(text = "Contactos de Emergencia",
+                     style = TextStyle(color = Color.Black, fontSize = 26.sp, FontWeight.Bold),
+                     modifier = Modifier.padding(20.dp))
 
                 Text(text = "  ")
             }
@@ -100,30 +91,25 @@ fun EmergencyContacts() {
             Divider(color = Color.Gray, thickness = 1.dp)
 
             Row {
-                Image(
-                    painter = alert,
-                    contentDescription = "emergency logo",
-                    modifier = Modifier
-                        .size(40.dp)
-                        .absoluteOffset(0.dp, 15.dp)
-                )
-                Column {
-                    Text(
-                        text = "Emergencias",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp, FontWeight.Bold),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(top = 10.dp)
-                    )
-                    Text(
-                        text = "Si se presenta un incidente o un percance " +
-                                "por favor marca el número de emergencia y rápidamente te apoyaremos",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(bottom = 10.dp)
-                    )
+                Image(painter = alert,
+                      contentDescription = "emergency logo",
+                      modifier = Modifier
+                          .size(40.dp)
+                          .absoluteOffset(0.dp, 15.dp))
 
+                Column {
+                    Text(text = "Emergencias",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp, FontWeight.Bold),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(top = 10.dp))
+
+                    Text(text = "Si se presenta un incidente o un percance " +
+                                "por favor marca el número de emergencia y rápidamente te apoyaremos",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(bottom = 10.dp))
                 }
             }
 
@@ -133,81 +119,70 @@ fun EmergencyContacts() {
                 .background(color = Color(21, 115, 32)))
             {
                 Image(painter = phoner, contentDescription = "Call logo",
-                    modifier = Modifier.size(35.dp).
-                absoluteOffset(6.dp,4.dp))
+                      modifier = Modifier
+                          .size(35.dp)
+                          .absoluteOffset(6.dp,4.dp))
 
-                Text(
-                    text = "Llamar a 5978-1736",
-                    style = TextStyle(color = Color.White, fontSize = 16.sp, FontWeight.Bold),
-                    modifier = Modifier
-                        .padding(horizontal = 50.dp)
-                        .padding(vertical = 10.dp)
-                )
+                Text(text = "Llamar a 5978-1736",
+                     style = TextStyle(color = Color.White, fontSize = 16.sp, FontWeight.Bold),
+                     modifier = Modifier
+                         .padding(horizontal = 50.dp)
+                         .padding(vertical = 10.dp))
             }
 
             Divider(color = Color.White, thickness = 10.dp)
 
             Divider(color = Color.Gray, thickness = 1.dp)
 
-
             Row {
-                Image(
-                    painter = clinic,
-                    contentDescription = "Clinics logo",
-                    modifier = Modifier
-                        .size(40.dp)
-                        .absoluteOffset(0.dp, 15.dp)
-                )
+                Image(painter = clinic,
+                      contentDescription = "Clinics logo",
+                      modifier = Modifier
+                          .size(40.dp)
+                          .absoluteOffset(0.dp, 15.dp))
+
                 Column {
-                    Text(
-                        text = "Clínica UVG",
-                        style = TextStyle(color = Color.Black, fontSize = 20.sp, FontWeight.Bold),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(top = 10.dp)
-                    )
-                    Text(
-                        text = "La Clínica UVG, presta los siguientes servicios:",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(bottom = 10.dp)
-                    )
-                    Text(
-                        text = "* Atención a Emergencias",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 30.dp)
-                            .padding(bottom = 10.dp)
-                    )
-                    Text(
-                        text = "* Atención Primaria a Enfermedades Comunes",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 30.dp)
-                            .padding(bottom = 10.dp)
-                    )
-                    Text(
-                        text = "* Plan Educacional sobre Enfermedades",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 30.dp)
-                            .padding(bottom = 10.dp)
-                    )
-                    Text(
-                        text = "Horario de Atención: 7:00a.m. a 8:30a.m.",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(bottom = 10.dp)
-                    )
-                    Text(
-                        text = "Campus Central Edificio F119-120",
-                        style = TextStyle(color = Color.Black, fontSize = 15.sp),
-                        modifier = Modifier
-                            .padding(horizontal = 20.dp)
-                            .padding(bottom = 10.dp)
-                    )
+                    Text(text = "Clínica UVG",
+                         style = TextStyle(color = Color.Black, fontSize = 20.sp, FontWeight.Bold),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(top = 10.dp))
+
+                    Text(text = "La Clínica UVG, presta los siguientes servicios:",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(bottom = 10.dp))
+
+                    Text(text = "* Atención a Emergencias",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 30.dp)
+                             .padding(bottom = 10.dp))
+
+                    Text(text = "* Atención Primaria a Enfermedades Comunes",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 30.dp)
+                             .padding(bottom = 10.dp))
+
+                    Text(text = "* Plan Educacional sobre Enfermedades",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                          modifier = Modifier
+                             .padding(horizontal = 30.dp)
+                             .padding(bottom = 10.dp))
+
+                    Text(text = "Horario de Atención: 7:00a.m. a 8:30a.m.",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(bottom = 10.dp))
+
+                    Text(text = "Campus Central Edificio F119-120",
+                         style = TextStyle(color = Color.Black, fontSize = 15.sp),
+                         modifier = Modifier
+                             .padding(horizontal = 20.dp)
+                             .padding(bottom = 10.dp))
                 }
             }
 
@@ -216,17 +191,17 @@ fun EmergencyContacts() {
                 .clip(RoundedCornerShape(10.dp))
                 .background(color = Color(21, 115, 32)))
             {
-                Image(painter = phoner, contentDescription = "Call logo",
-                    modifier = Modifier.size(35.dp).
-                    absoluteOffset(6.dp,4.dp))
+                Image(painter = phoner,
+                      contentDescription = "Call logo",
+                      modifier = Modifier
+                          .size(35.dp)
+                          .absoluteOffset(6.dp,4.dp))
 
-                Text(
-                    text = "Llamar a 2507-1500 ex 21312",
-                    style = TextStyle(color = Color.White, fontSize = 16.sp, FontWeight.Bold),
-                    modifier = Modifier
-                        .padding(horizontal = 50.dp)
-                        .padding(vertical = 10.dp)
-                )
+                Text(text = "Llamar a 2507-1500 ex 21312",
+                     style = TextStyle(color = Color.White, fontSize = 16.sp, FontWeight.Bold),
+                     modifier = Modifier
+                         .padding(horizontal = 50.dp)
+                         .padding(vertical = 10.dp))
             }
 
             Divider(color = Color.White, thickness = 10.dp)

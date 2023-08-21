@@ -77,13 +77,13 @@ fun CentralCampus(){
         Row ()
         {
             Text(text = "Campus Central",
-                style = TextStyle(color = Color.Black, fontSize = 26.sp, fontWeight = FontWeight.Bold),
-                modifier = Modifier.padding(20.dp))
+                 style = TextStyle(color = Color.Black, fontSize = 26.sp, fontWeight = FontWeight.Bold),
+                 modifier = Modifier.padding(20.dp))
         }
         Image(painter = campus,
-            contentDescription = "Front Page Image",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.height(200.dp))
+              contentDescription = "Front Page Image",
+              contentScale = ContentScale.Crop,
+              modifier = Modifier.height(200.dp))
     }
 }
 @Composable
@@ -107,22 +107,20 @@ fun ServiceNow(modifier: Modifier = Modifier){
     val sn = painterResource(id = R.drawable.servicenow)
 
     Column (modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally)
+            horizontalAlignment = Alignment.CenterHorizontally)
     {
         Image(painter = sn,
-            contentDescription = "Service Now Image",
-            modifier = Modifier.size(100.dp))
+              contentDescription = "Service Now Image",
+              modifier = Modifier.size(100.dp))
 
         Box(modifier = Modifier
             .width(180.dp)
             .clip(RoundedCornerShape(bottomStart = 8.dp, bottomEnd = 8.dp))
-            .background(color = Color(21, 115, 32))
-            )
+            .background(color = Color(21, 115, 32)))
         {
-
             Text(text = "Service Now",
-                style = TextStyle(color = Color.White, fontSize = 15.sp),
-                modifier = Modifier.padding(15.dp))
+                 style = TextStyle(color = Color.White, fontSize = 15.sp),
+                 modifier = Modifier.padding(15.dp))
         }
     }
 }
@@ -134,36 +132,32 @@ fun News(modifier: Modifier = Modifier){
     Column(modifier = modifier,
            horizontalAlignment = Alignment.CenterHorizontally)
     {
-
         Image(painter = news,
-            contentDescription = "News Image",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
+              contentDescription = "News Image",
+              contentScale = ContentScale.Crop,
+              modifier = Modifier
                 .width(180.dp)
                 .height(100.dp)
-                .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
-        )
+                .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp)))
 
         Box(modifier = Modifier
             .width(180.dp)
             .clip(RoundedCornerShape(bottomStart = 8.dp, bottomEnd = 8.dp))
-            .background(color = Color.DarkGray)
-            )
+            .background(color = Color.DarkGray))
         {
-
             Text(text = "Actualidad UVG",
-                style = TextStyle(color = Color.White, fontSize = 15.sp),
-                modifier = Modifier.padding(15.dp))
+                 style = TextStyle(color = Color.White, fontSize = 15.sp),
+                 modifier = Modifier.padding(15.dp))
         }
     }
 }
 
+
 @Composable
-fun ServicesAndResources(){
-    Text(
-        text = "Servicios y Recursos",
-        style = TextStyle(color = Color.Gray, fontSize = 24.sp, fontWeight = FontWeight.Bold),
-        modifier = Modifier.padding(20.dp))
+fun ServicesAndResources() {
+    Text(text = "Servicios y Recursos",
+         style = TextStyle(color = Color.Gray, fontSize = 24.sp, fontWeight = FontWeight.Bold),
+         modifier = Modifier.padding(20.dp))
 
     Row (modifier = Modifier
         .fillMaxWidth()
@@ -174,20 +168,21 @@ fun ServicesAndResources(){
         Library(modifier = Modifier.weight(1f))
     }
 }
-@Composable
-fun ServiceDirectory(modifier: Modifier = Modifier){
-    val services = painterResource(id = R.drawable.services)
-    Column(modifier = modifier,
-           horizontalAlignment = Alignment.CenterHorizontally) {
 
+@Composable
+fun ServiceDirectory(modifier: Modifier = Modifier) {
+    val services = painterResource(id = R.drawable.services)
+
+    Column(modifier = modifier,
+           horizontalAlignment = Alignment.CenterHorizontally)
+    {
         Image(painter = services,
-            contentDescription = "Student Services Image",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .width(180.dp)
-                .height(100.dp)
-                .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
-        )
+              contentDescription = "Student Services Image",
+              contentScale = ContentScale.Crop,
+              modifier = Modifier
+                  .width(180.dp)
+                  .height(100.dp)
+                  .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp)))
 
         Box(modifier = Modifier
             .width(180.dp)
@@ -195,34 +190,31 @@ fun ServiceDirectory(modifier: Modifier = Modifier){
             .background(color = Color(21, 115, 32))
             .padding(10.dp))
         {
-
             Text(text = "Directorio de Servicios Estudiantiles",
-                style = TextStyle(color = Color.White, fontSize = 15.sp))
+                 style = TextStyle(color = Color.White, fontSize = 15.sp))
         }
     }
 }
 
 @Composable
-fun Library(modifier: Modifier = Modifier){
+fun Library(modifier: Modifier = Modifier) {
     val bib = painterResource(id = R.drawable.biblioteca)
 
     Column (modifier = modifier,
             horizontalAlignment = Alignment.CenterHorizontally)
     {
         Image(painter = bib,
-            contentDescription = "Library Image",
-            modifier = Modifier.height(100.dp))
+              contentDescription = "Library Image",
+              modifier = Modifier.height(100.dp))
 
         Box(modifier = Modifier
             .width(180.dp)
             .clip(RoundedCornerShape(bottomStart = 8.dp, bottomEnd = 8.dp))
             .background(color = Color.DarkGray)
-            .padding(10.dp)
-            )
+            .padding(10.dp))
         {
-
             Text(text = "Portal Web Bibliotecas UVG",
-                style = TextStyle(color = Color.White, fontSize = 15.sp))
+                 style = TextStyle(color = Color.White, fontSize = 15.sp))
         }
     }
 }
