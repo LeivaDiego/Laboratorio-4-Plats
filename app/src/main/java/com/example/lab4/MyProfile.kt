@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -61,7 +63,8 @@ fun MyProfilePreview() {
 @Composable
 fun MyProfilePage(){
     Surface {
-        Column {
+        Column (modifier = Modifier.verticalScroll(rememberScrollState()))
+        {
             Profile()
             Menu()
         }
@@ -104,7 +107,7 @@ fun Profile(){
                 modifier = Modifier
                     .size(150.dp)
                     .align(Alignment.Center)
-                    .absoluteOffset(0.dp, 50.dp)
+                    .absoluteOffset(0.dp, 40.dp)
             )
 
             Image(painter = avatar,
@@ -112,7 +115,7 @@ fun Profile(){
             modifier = Modifier
                 .size(150.dp)
                 .align(Alignment.Center)
-                .absoluteOffset(0.dp, 50.dp)
+                .absoluteOffset(0.dp, 40.dp)
             )
         }
 
@@ -131,6 +134,7 @@ fun Menu(){
     val friends = painterResource(id = R.drawable.friends)
     val courses = painterResource(id = R.drawable.courses)
     val campus = painterResource(id = R.drawable.campus)
+
     Column (Modifier.fillMaxWidth()){
 
         Divider(color = Color.Gray, thickness = 1.dp)
